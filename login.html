@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Přihlášení</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body>
+
+  <h1 class="text-3xl font-bold text-center text-grey-700 mb-6">Přihlášení</h1>
+
+  <div class="border border-gray-400 p-6 rounded-lg bg-white w-96 mx-auto">
+   
+    <form action="#" method="post">
+
+      <label class="font-semibold" for="email">Email</label><br>
+      <input class="border border-gray-400 rounded p-2 w-full mb-4" id="email" type="email" name="email" placeholder="jmeno@email.cz"required><br>
+
+      <label class="font-semibold" for="password">Heslo</label><br>
+      <input class="border border-gray-300 rounded p-2 w-full mb-4" id="password" type="password" name="password" placeholder="heslo"required><br>
+        
+      <label class="mb-4" for="terms" class="checkbox-and-radio-label">
+      <input id="terms" type="checkbox" name="terms" required> Pamatuj si mě 30 dní</label><br>
+     
+
+      <input class="bg-zinc-400 text-white px-4 py-2 rounded font-bold cursor-pointer hover:bg-gray-700" type="submit" value="Přihlásit se"><br>
+
+        Nejsi registrovaný? 
+
+      <a href="http://127.0.0.1:5500/form.html" class="text-grey-600 font-semibold hover:underline">
+        Vytvoř si účet
+      </a>
+
+    </form>
+  
+  </div>
+
+
+  <script src="skript.js"></script>
+=/script>
+
+
+
+</body>
+
+</html>

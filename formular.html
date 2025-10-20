@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Registrace</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="flex items-center justify-center h-screen bg-blue-100">
+
+  
+  <button id="openModal" class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-700 transition">
+    Registrovat
+  </button>
+
+  
+  <div id="myModal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <div class="bg-white rounded-xl p-6 w-80 shadow-lg relative">
+      <button id="closeModal" class="absolute top-2 right-3 text-gray-400 hover:text-gray-600 text-xl">&times;</button>
+      <h2 class="text-xl font-semibold mb-4 text-center">Registrace</h2>
+      <form id="registerForm" class="flex flex-col gap-3">
+        <input type="email" id="email" placeholder="Email" required class="border rounded-md px-3 py-2" />
+        <input type="password" id="password" placeholder="Heslo" required class="border rounded-md px-3 py-2" />
+        <button type="submit" class="bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+          Odeslat
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
