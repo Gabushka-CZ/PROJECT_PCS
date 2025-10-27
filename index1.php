@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 // 1
     $name = "Gabriela";
@@ -149,7 +149,7 @@
 
  
 
-    //22
+//22
 
     $names = ['Eva', 'Jan', 'Eva', 'Petr'];
     $uniqueNames = array_unique($names);
@@ -161,8 +161,7 @@
     $b = [3, 4];
     $mergingAB= array_merge($a, $b);
     print_r($mergingAB);
-
-    //24
+//24
    
     if (in_array("Jan", $names)){
         echo "Jan se je v poli.";
@@ -171,12 +170,12 @@
     }
 
 
-    //25
+//25
     $numbers = [9, 2, 5, 1];
     sort($numbers);
    
 
-    //26
+//26
     function findLongestWord($words) {
     $longest = '';
     foreach ($words as $word) {
@@ -189,7 +188,7 @@
     
     echo findLongestWord(['aaaaaaaaaaaaaaaaa','bbbbbbbbbbbb','cccccccccccc']);
 
-    //27
+//27
 
     function sumEvenNumbers($numbers) {
         $even = array_filter($numbers, fn($n) => $n % 2 === 0);
@@ -198,7 +197,7 @@
     
     
 
-    //28
+//28
     function reverseWords($sentence) {
         $words = explode(' ', $sentence);
         $reversed = array_reverse($words);
@@ -207,7 +206,7 @@
 
     
 
-    //29
+//29
 
     function hasDuplicates($array) {
         $unique = array_unique($array);
@@ -217,7 +216,7 @@
     
         
  
-        //30
+//30
     function uniqueLetters($string) {
         $letters = str_split(str_replace(' ', '', strtolower($string)));
         return array_values(array_unique($letters));
