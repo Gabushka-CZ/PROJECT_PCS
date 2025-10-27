@@ -1,3 +1,9 @@
-<?php
+<<?php
 
-require "functions.php"
+function showAbout($request)
+{
+    $user = "Tom";
+    zobrazHTML("about", [
+        "user" => $user
+    ]);
+}

@@ -1,5 +1,6 @@
 <?php
-//1
+
+// 1
     $name = "Gabriela";
     $vek = 35;
     $height = 1.67;
@@ -20,11 +21,13 @@
     gettype($x);
 
 //4
-    $number = "42";
-    $number_int = (int) $number;
-    $soucet = $number_int + 8;
+    $number = (int) "42";
+    
+    $sum = $number + 8;
 
-    echo $soucet;
+    echo $sum;
+
+//5
 
     $pole = ["red", "green", "blue"];
     echo $pole[1];
@@ -33,127 +36,144 @@
     $score = 75;
 
     if ($score > 90) {
-    echo "Výborně";
-    } elseif ($score >= 60 && $score <= 89) {
-    echo "Dobře";
+        echo "Výborně";
+    } elseif ($score>60 && $score<89) {
+        echo "Dobře";
     } else {
-    echo "Zkus to znovu";
+        echo "Zkus to znovu";
     } 
     
 //7
-    $x = 10;
+    $x = 15;
     if ($x % 2 == 0) {
-    echo "Číslo je sudé";
+        echo "Číslo je sudé";
     } else {
-    echo "Číslo je liché";
+        echo "Číslo je liché";
     }
 
 //8 
     $name = "Gabriela";
-    if (($name[0]) === "a") {
-    echo "Řetězec začíná písmenem 'a'";
+    if (str_starts_with($name, "A")) {
+        echo "Jméno začíná A";
     } else {
-    echo "Řetězec nezačíná písmenem 'a'";
+        echo "Jméno nezačíná A";
     }
 
 //9
 
     $loggedIn = false;
-
-    echo $loggedIn ? "Přihlášen" : "Odhlášen";
+    if ($loggedIn === true) {
+        echo "Přihlášen";
+    } else {
+        echo "Odhlášen";
+    }
 
 //10
     $items = ["auto"];
-
     if (empty($items)) {
-    echo "Žádné položky";
+        echo "Žádné položky";
     } else {
-    echo "Pole obsahuje prvky";
+        echo "Pole obsahuje polozky";
     }
+
 //11
     function greet($name) {
-    return "Ahoj " . $name . "!";
+        return "Ahoj " . $name;
     }
 
     echo greet("Gabriela");
+
 //12
 
     function add($a, $b) {
-    return $a + $b;
-    }echo add(1, 2);
+        return $a + $b;
+    } 
+    
+    echo add(1, 2);
 
 //13
     function isEven($number) {
-    return $number % 2 == 0;
+        return $number % 2 == 0;
     }
-    echo isEven(6) ? "Sudé" : "Liché";
+    
 
 //14
+
+    $array = [10,15,20];
+
     function average($numbers) {
-    if (count($numbers) == 0) return 0;
-    return array_sum($numbers) / count($numbers);
+        return array_sum($numbers) / count($numbers);
     }
-    $numbers = [0, 2, 35, 3];
-    echo average($numbers); 
+  
+    echo average($array);
+
 //15
    //  function countVowels($string) {
     //$string = strtolower($string);
     //$vowels = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'y', 'ý'];
 
 //16
-    $text = "Ahoj světe";
+    $text = "Ahoj";
     echo strrev($text);
 
 //17
+
     $word = "php";
     $word = ucfirst($word);
 
     echo $word;
+
 //18
     $sentence = "Dnes je krasny den, že ano?";
-    $count = substr_count(strtolower($sentence), "a");
+    $count = substr_count(($sentence), "a");
 
-    echo " 'a' je ve větě  " . $count;
+    echo  $count;
+
 //19 
-    if (str_contains(strtolower($sentence), "laravel")) {
-    echo "Věta obsahuje slovo 'Laravel'.";  
-    } else {echo "Věta neobsahuje slovo 'Laravel'.";
+    if (str_contains(($sentence), "laravel")) {
+        echo "Věta obsahuje slovo 'laravel'.";  
+    } else {echo "Věta neobsahuje slovo 'laravel'.";
 }
 
 //20
-    $updated = str_replace("e", "3", $sentence);
+    $NewSentence= str_ireplace("e", "3", $sentence);
 
-    echo $updated;
+    echo  $NewSentence;
 
  //21
     $numbers = [1, 2, 3, 4, 5];
     $doubleNumbers = array_map(function($num) {
-    return $num * 2;
+        return $num * 2;
     }, $numbers);
 
-    print_r($doubleNumbers);
+ 
 
     //22
 
     $names = ['Eva', 'Jan', 'Eva', 'Petr'];
     $uniqueNames = array_unique($names);
-    print_r($uniqueNames);
+
 
 
     //23
     $a = [1, 2];
     $b = [3, 4];
-    $mergedarray = array_merge($a, $b);
-    print_r($mergedarray);
+    $mergingAB= array_merge($a, $b);
+    print_r($mergingAB);
 
     //24
-    $found = in_array('Jan', $names);
-    echo $found ? "'Jan' se nachází.\n" : "'Jan' se nenachází.\n";
+   
+    if (in_array("Jan", $names)){
+        echo "Jan se je v poli.";
+     } else {
+        echo "Jan se není v poli.";
+    }
+
 
     //25
     $numbers = [9, 2, 5, 1];
     sort($numbers);
-    print_r($numbers);
+   
 
     //26
     function findLongestWord($words) {
@@ -163,39 +183,45 @@
             $longest = $word;
         }
     }
-    return $longest;
+        return $longest;
     }
-    echo findLongestWord(['kočka', 'slon', 'tygr', 'hroch']) . "\n";
+    
+    echo findLongestWord(['aaaaaaaaaaaaaaaaa','bbbbbbbbbbbb','cccccccccccc']);
 
     //27
 
     function sumEvenNumbers($numbers) {
-    $even = array_filter($numbers, fn($n) => $n % 2 === 0);
-    return array_sum($even);
+        $even = array_filter($numbers, fn($n) => $n % 2 === 0);
+        return array_sum($even);
     }
-    echo sumEvenNumbers([1, 2, 3, 4, 5, 6]) . "\n";
+    
+    var_dump sumEvenNumbers([1, 2, 3, 4, 5, 6]);
 
     //28
     function reverseWords($sentence) {
-    $words = explode(' ', $sentence);
-    $reversed = array_reverse($words);
-    return implode(' ', $reversed);
+        $words = explode(' ', $sentence);
+        $reversed = array_reverse($words);
+        return implode(' ', $reversed);
     }
-    echo reverseWords('Ahoj světe jak se máš') . "\n";
+
+    var_dump reverseWords('Ahoj světe jak se máš');
 
     //29
 
     function hasDuplicates($array) {
-    return count($array) !== count(array_unique($array));
+        $unique = array_unique($array);
+        return count($array) != count($unique);
     }
-    var_export(hasDuplicates([1, 2, 3, 3]));
-    echo "\n";
+
+    var_dump hasDuplicates([1, 2, 3, 3]);
+        
  
         //30
     function uniqueLetters($string) {
-    $letters = str_split(str_replace(' ', '', strtolower($string)));
-    return array_values(array_unique($letters));
+        $letters = str_split(str_replace(' ', '', strtolower($string)));
+        return array_values(array_unique($letters));
     }
-    print_r(uniqueLetters('Ahoj Světe'));
+    
+    var_dump (uniqueLetters('Ahoj Gabčo'));
 
 ?>
